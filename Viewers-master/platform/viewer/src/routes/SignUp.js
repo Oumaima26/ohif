@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Link } from "react-router-dom";
+import { NavLink,Link } from "react-router-dom";
 import {withRouter } from "react-router-dom";
 import PropTypes from "prop-types";
 import { connect } from "react-redux";
@@ -35,7 +35,7 @@ class SignUp extends Component {
   componentDidMount() {
     // If logged in and user navigates to Register page, should redirect them to dashboard
     /*if (this.props.auth.isAuthenticated) {
-      this.props.history.push("/dashboard");
+      this.props.history.push("/studylist");
     }*/
   }
   mponentWillReceiveProps(nextProps) {
@@ -143,17 +143,21 @@ class SignUp extends Component {
             />
           </Link>
           <br />
+          <a href="/https://www.google.com" variant="body2">
           <input
             className="google"
             type="submit"
             value="Continue with Google"
           />
+          </a>
           <br />
+          <NavLink to="/https://www.facebook.com" variant="body2">
           <input
             className="facebook"
             type="submit"
             value="Continue with Facebook"
           />
+          </NavLink>
         </form>
       </div>
     );

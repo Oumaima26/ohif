@@ -75,6 +75,11 @@ class OHIFStandaloneViewer extends Component {
           path='/signin'
           component='SignIn'
           />
+          
+          <Route
+          path='/patients'
+          component='Patients'
+          />
              {/*****added by challenge team***** */  }
           <Route
             exact

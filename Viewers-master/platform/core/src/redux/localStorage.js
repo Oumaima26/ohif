@@ -23,6 +23,7 @@ export const saveState = state => {
 const localStorage = {
   saveState,
   loadState,
+  
 };
 
 export default localStorage;

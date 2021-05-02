@@ -17,16 +17,17 @@ class SignIn extends Component {
       errors: {},
       
     };
-  }/*componentDidMount() {
+  }
+  /*componentDidMount() {
     // If logged in and user navigates to Login page, should redirect them to dashboard
     if (this.props.auth.isAuthenticated) {
-      this.props.history.push("/dashboard");
+      this.props.history.push("/studylist");
     }
   }
 
   componentWillReceiveProps(nextProps) {
     if (nextProps.auth.isAuthenticated) {
-      this.props.history.push("/dashboard");
+      this.props.history.push("/studylist");
     }
 
     if (nextProps.errors) {
@@ -53,6 +54,8 @@ class SignIn extends Component {
       email:'',
       password:''
     })
+    
+    window.location = '/patients';
   };
   render() {
     return (

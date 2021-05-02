@@ -9,7 +9,7 @@ const DoctorSchema = new Schema({
   },
   prenom: { 
     type: String,
-    match: /^[a-zA-Z0-9-_]+$/,
+    match: /^[a-zA-Z0-9- _]+$/,
     required: true 
   },
   tel: { 

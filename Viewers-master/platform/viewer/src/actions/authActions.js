@@ -24,21 +24,24 @@ export const loginUser = (userData, history)  => dispatch => {
     .post("http://localhost:3001/Doctor/login", userData)
     .then(res => {
       if (res){
+        
 
       // Save to localStorage
 
       // Set token to localStorage
       const { token } = res.data;
-      localStorage.setItem("jwtToken", token);
+      //localStorage.setItem("jwtToken", token);
       // Set token to Auth header
       setAuthToken(token);
       // Decode token to get user data
       const decoded = jwt_decode(token);
       // Set current user
       dispatch(setCurrentUser(decoded));
+      
+      history.push("/patients");
       }
       if(!res){
-        history.push("/")
+        history.push("/signup")
       }
     })
     .catch(err =>

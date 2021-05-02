@@ -44,6 +44,11 @@ const ViewerLocalFileData = asyncComponent(() =>
     '../routes/FormPatient.js'
   ))
   );
+  const Patients=asyncComponent(()=>
+  retryImport(()=>import(
+    '../routes/Patients.js'
+  ))
+  );
   /*****added by challenge team***** */  
 const reload = () => window.location.reload();
 
@@ -77,6 +82,10 @@ const ROUTES_DEF = {
       signin:{
         path:['/signin', '/'],
         component : SignIn
+      },
+      patients:{
+        path:'/patients',
+        component : Patients
       },
         /*****added by challenge team***** */  
     local: {
